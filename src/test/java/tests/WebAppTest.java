@@ -10,8 +10,8 @@ import utils.ExcelUtils;
 public class WebAppTest {
 	
 	@Test
-    public void WebAppFirst(String[] args) {
-        DriverManager.getWebDriver("edge");
+    public void WebAppFirst() {
+        DriverManager.getWebDriver("chrome");
         LoginPage loginPage = new LoginPage(DriverManager.getWebDriver("edge"));
 
         try {
@@ -32,7 +32,7 @@ public class WebAppTest {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            DriverManager.quitDrivers();
+            DriverManager.quitWindowDrivers();
         }
     }
 }
