@@ -1,13 +1,16 @@
-package crestech.com.CrestechSelenium;
+package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import drivers.DriverManager;
 import pageobjects.LoginPage;
 import utils.ExcelUtils;
  
 public class WebAppTest {
-    public static void main(String[] args) {
+	
+	@Test
+    public void WebAppFirst(String[] args) {
         DriverManager.getWebDriver("edge");
         LoginPage loginPage = new LoginPage(DriverManager.getWebDriver("edge"));
 

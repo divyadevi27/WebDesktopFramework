@@ -1,4 +1,6 @@
-package crestech.com.CrestechSelenium;
+package tests;
+
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -10,15 +12,16 @@ import utils.ExtentManager;
 
 public class DesktopAppTest {
 	
-	public static void main(String[] args) {
+	@Test
+	public void FirstDesktopTest() {
 		DriverManager.getAppiumDriver();
 		DesktopLoginPage loginPage = new DesktopLoginPage(DriverManager.getAppiumDriver());
 		try {
 			ExtentManager.getInstance();
 			ExtentTest test = ExtentManager.createTest("Desktop Application Login Test");
 
-			EmailUtils emailUtils = new EmailUtils();
-			emailUtils.mailSent();
+//			EmailUtils emailUtils = new EmailUtils();
+//			emailUtils.mailSent();
 			
 			ExcelUtils excelUtils = new ExcelUtils("src/resources/testdata.xlsx");
 			int rowCount = excelUtils.getRowCount("LoginData");

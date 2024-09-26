@@ -60,7 +60,7 @@ public class DriverManager
     public static AppiumDriver getAppiumDriver() {
         if (appiumDriver == null) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("app", "C:\\Users\\Garima.Goyal\\AppData\\Local\\Programs\\certiplate-candidate-app\\navrithi-certiplate.exe");
+            capabilities.setCapability("app", "C:\\Users\\Divya.Devi\\AppData\\Local\\Programs\\certiplate-candidate-app\\navrithi-certiplate.exe");
             capabilities.setCapability("platformName", "Windows");
             capabilities.setCapability("deviceName", "WindowsPC");
  
