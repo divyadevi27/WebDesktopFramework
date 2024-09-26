@@ -24,27 +24,18 @@ public class DriverManager
         if (webDriver == null) {
             switch (browser.toLowerCase()) {
                 case "chrome":
-                    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Garima.Goyal\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+                    System.setProperty("webdriver.chrome.driver", "D:\\Driver\\chromedriver.exe");
                     webDriver = new ChromeDriver();
-                	
-                	  // Initialize Chrome Options if needed
-//                    ChromeOptions chromeOptions = new ChromeOptions();
-//                    chromeOptions.addArguments("--start-maximized");  // Opens Chrome in full screen
-//                    chromeOptions.addArguments("--disable-infobars");  // Disables the 'Chrome is being controlled by automated test software' message
-//
-//                    // Set up the WebDriver using WebDriverManager to manage ChromeDriver
-//                    WebDriverManager.chromedriver().setup();
-//                    webDriver = new ChromeDriver(chromeOptions);
                     webDriver.get("https://app-qa.certiplate.com/account/login");
                     break;
                 case "firefox":
-                   System.setProperty("webdriver.gecko.driver", "C:\\Users\\Garima.Goyal\\Downloads\\geckodriver-v0.35.0-win32\\geckodriver.exe");
+                   System.setProperty("webdriver.gecko.driver", "D:\\Driver\\geckodriver.exe");
                    webDriver = new FirefoxDriver();
                    webDriver.get("https://app-qa.certiplate.com/account/login");
                     break;
                     
                 case "edge":
-                    System.setProperty("webdriver.edge.driver", "C:\\Users\\Garima.Goyal\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+                    System.setProperty("webdriver.edge.driver", "D:\\Driver\\msedgedriver.exe");
                     webDriver = new EdgeDriver();
                     webDriver.get("https://app-qa.certiplate.com/account/login");
                      break;
@@ -74,11 +65,14 @@ public class DriverManager
         return appiumDriver;
     }
  
-    public static void quitDrivers() {
+    public static void quitWindowDrivers() {
         if (webDriver != null) {
             webDriver.quit();
             webDriver = null;
         }
+    }
+    
+    public static void quitAppiumDrivers() {
         if (appiumDriver != null) {
             appiumDriver.quit();
             appiumDriver = null;
