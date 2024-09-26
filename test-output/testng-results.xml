@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-26T12:56:07 IST" name="Suite" finished-at="2024-09-26T12:56:14 IST" duration-ms="6793">
+  <suite started-at="2024-09-26T14:53:32 IST" name="Suite" finished-at="2024-09-26T14:53:48 IST" duration-ms="16081">
     <groups>
     </groups>
-    <test started-at="2024-09-26T12:56:07 IST" name="Test" finished-at="2024-09-26T12:56:14 IST" duration-ms="6793">
+    <test started-at="2024-09-26T14:53:32 IST" name="Test" finished-at="2024-09-26T14:53:48 IST" duration-ms="16081">
       <class name="tests.WebAppTest">
-        <test-method signature="WebAppFirst()[pri:0, instance:tests.WebAppTest@6caf0677]" started-at="2024-09-26T12:56:08 IST" name="WebAppFirst" finished-at="2024-09-26T12:56:14 IST" duration-ms="6022" status="PASS">
+        <test-method signature="WebAppFirst()[pri:0, instance:tests.WebAppTest@1c5920df]" started-at="2024-09-26T14:53:32 IST" name="WebAppFirst" finished-at="2024-09-26T14:53:48 IST" duration-ms="16047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- WebAppFirst -->
       </class> <!-- tests.WebAppTest -->
       <class name="tests.DesktopAppTest">
-        <test-method signature="FirstDesktopTest()[pri:0, instance:tests.DesktopAppTest@196a42c3]" started-at="2024-09-26T12:56:08 IST" name="FirstDesktopTest" finished-at="2024-09-26T12:56:14 IST" duration-ms="6753" status="PASS">
+        <test-method signature="FirstDesktopTest()[pri:0, instance:tests.DesktopAppTest@7ef82753]" started-at="2024-09-26T14:53:32 IST" name="FirstDesktopTest" finished-at="2024-09-26T14:53:39 IST" duration-ms="6768" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FirstDesktopTest -->
