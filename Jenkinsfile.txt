@@ -2,10 +2,10 @@ pipeline {
    // agent any  // Use any available agent
 
     stages {
-        stage('Checkout') {
+         stage('Checkout') {
             steps {
-                // Checkout source code from the repository
-                git 'https://github.com/divyadevi27/WebDesktopFramework.git'
+                // Clone the repository using credentials
+                git credentialsId: 'b33927dd-5687-4dab-b79c-544fa4a6107a', branch: 'main', url: 'https://github.com/divyadevi27/WebDesktopFramework.git'
             }
         }
         
