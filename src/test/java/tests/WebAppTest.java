@@ -3,9 +3,12 @@ package tests;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentTest;
+
 import drivers.DriverManager;
 import pageobjects.LoginPage;
 import utils.ExcelUtils;
+import utils.ExtentManager;
  
 public class WebAppTest {
 	
@@ -17,7 +20,8 @@ public class WebAppTest {
         try {
             ExcelUtils excelUtils = new ExcelUtils("src/resources/testdata.xlsx");
             int rowCount = excelUtils.getRowCount("LoginData");
- 
+            ExtentManager.getInstance();
+			ExtentTest test = ExtentManager.createTest("Web Application Login Test");
             for (int i = 1; i < rowCount; i++) {
                 String username = excelUtils.getCellData("LoginData", i, 0);
                 String password = excelUtils.getCellData("LoginData", i, 1);
