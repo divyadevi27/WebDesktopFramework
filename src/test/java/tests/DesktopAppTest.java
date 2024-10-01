@@ -35,7 +35,8 @@ public class DesktopAppTest {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
+		}
+		finally {
 			ExtentManager.flush();
 			DriverManager.quitAppiumDrivers();
 		}

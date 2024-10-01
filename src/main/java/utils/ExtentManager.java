@@ -1,6 +1,14 @@
 package utils;
 
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -14,6 +22,12 @@ public class ExtentManager {
 
 	public static ExtentReports getInstance() {
 		if (extent == null) {
+			
+			
+			
+			
+			
+			
 			String reportName = "ExtentReport.html";
 			String filePath = System.getProperty("user.dir")+ "\\" + reportName;
 //			htmlReporter = new ExtentHtmlReporter(filePath);
@@ -39,4 +53,17 @@ public class ExtentManager {
 	        extent.flush();
 	    }
 	}
+	
+	public void captureScreenshot(WebDriver driver, String testName) {
+	    File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	    try {
+	        FileUtils.copyFile(srcFile, new File("screenshots/" + testName + ".png"));
+	        test.addScreenCaptureFromPath("screenshots/" + testName + ".png");
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	
+	
 }

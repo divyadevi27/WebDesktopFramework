@@ -1,23 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-26T14:53:32 IST" name="Suite" finished-at="2024-09-26T14:53:48 IST" duration-ms="16081">
+  <suite started-at="2024-10-01T14:43:39 IST" name="Parallel Browser tests" finished-at="2024-10-01T14:43:52 IST" duration-ms="12858">
     <groups>
     </groups>
-    <test started-at="2024-09-26T14:53:32 IST" name="Test" finished-at="2024-09-26T14:53:48 IST" duration-ms="16081">
-      <class name="tests.WebAppTest">
-        <test-method signature="WebAppFirst()[pri:0, instance:tests.WebAppTest@1c5920df]" started-at="2024-09-26T14:53:32 IST" name="WebAppFirst" finished-at="2024-09-26T14:53:48 IST" duration-ms="16047" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- WebAppFirst -->
-      </class> <!-- tests.WebAppTest -->
+    <test started-at="2024-10-01T14:43:39 IST" name="Desktop Tests" finished-at="2024-10-01T14:43:48 IST" duration-ms="8637">
       <class name="tests.DesktopAppTest">
-        <test-method signature="FirstDesktopTest()[pri:0, instance:tests.DesktopAppTest@7ef82753]" started-at="2024-09-26T14:53:32 IST" name="FirstDesktopTest" finished-at="2024-09-26T14:53:39 IST" duration-ms="6768" status="PASS">
+        <test-method signature="FirstDesktopTest()[pri:0, instance:tests.DesktopAppTest@1033576a]" started-at="2024-10-01T14:43:39 IST" name="FirstDesktopTest" finished-at="2024-10-01T14:43:48 IST" duration-ms="8600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FirstDesktopTest -->
       </class> <!-- tests.DesktopAppTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Desktop Tests -->
+    <test started-at="2024-10-01T14:43:39 IST" name="Chrome Tests" finished-at="2024-10-01T14:43:48 IST" duration-ms="8642">
+      <class name="tests.WebAppTest">
+        <test-method signature="WebAppFirst(java.lang.String)[pri:0, instance:tests.WebAppTest@7674f035]" started-at="2024-10-01T14:43:39 IST" name="WebAppFirst" finished-at="2024-10-01T14:43:48 IST" duration-ms="8578" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebAppFirst -->
+        <test-method signature="WebAppSecond(java.lang.String)[pri:0, instance:tests.WebAppTest@7674f035]" started-at="2024-10-01T14:43:48 IST" name="WebAppSecond" finished-at="2024-10-01T14:43:48 IST" duration-ms="22" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebAppSecond -->
+      </class> <!-- tests.WebAppTest -->
+    </test> <!-- Chrome Tests -->
+    <test started-at="2024-10-01T14:43:39 IST" name="Firefox Tests" finished-at="2024-10-01T14:43:52 IST" duration-ms="12858">
+      <class name="tests.WebAppTest">
+        <test-method signature="WebAppFirst(java.lang.String)[pri:0, instance:tests.WebAppTest@70ed52de]" started-at="2024-10-01T14:43:39 IST" name="WebAppFirst" finished-at="2024-10-01T14:43:52 IST" duration-ms="12804" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebAppFirst -->
+        <test-method signature="WebAppSecond(java.lang.String)[pri:0, instance:tests.WebAppTest@70ed52de]" started-at="2024-10-01T14:43:52 IST" name="WebAppSecond" finished-at="2024-10-01T14:43:52 IST" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WebAppSecond -->
+      </class> <!-- tests.WebAppTest -->
+    </test> <!-- Firefox Tests -->
+  </suite> <!-- Parallel Browser tests -->
 </testng-results>
