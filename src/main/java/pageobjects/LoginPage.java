@@ -5,13 +5,14 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+
+import drivers.DriverManager;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
  
-public class LoginPage {
-	 private WebDriver driver;
-
-	  
+public class LoginPage extends DriverManager{
+	 private WebDriver driver;// = DriverManager.getDriver();
  
     @FindBy(id = "username")
     private WebElement usernameField;
@@ -23,7 +24,7 @@ public class LoginPage {
     private WebElement loginButton;
  
     public LoginPage(WebDriver driver) {
-      //  this.driver = driver;
+        this.driver = driver; 
         PageFactory.initElements(driver, this);
     }
  
